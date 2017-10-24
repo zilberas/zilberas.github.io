@@ -64,6 +64,21 @@
   <p>Some text in my newly loaded page..</p>
 </div>
 
+        <form method="POST" action="issuerUrl" id="3dform">
+            <input type="hidden" name="PaReq" id="PaReq" value="" />
+            <input type="hidden" name="MD" id="MD" value="" />
+            <input type="hidden" name="TermUrl" id="TermUrl" value="" />
+            <noscript>
+                <br>
+                <br>
+                <div style="text-align: center">
+                    <h1>Processing your 3D Secure Transaction</h1>
+                    <p>Please click continue to continue the processing of your 3D Secure transaction.</p>
+                    <input type="submit" class="button" value="continue"/>
+                </div>
+            </noscript>
+        </form>
+
 <script>
 var myVar;
 
@@ -74,7 +89,19 @@ function myFunction() {
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
+  document.getElementById("3dform").submit();
 }
+
+var urlParams = new URLSearchParams(window.location.search);
+var issuerUrl = decodeURIComponent(urlParams.get('issuerUrl'));
+var paRequest = decodeURIComponent(urlParams.get('paRequest'));
+var md = decodeURIComponent(urlParams.get('md'));
+var termUrl = decodeURIComponent(urlParams.get('termUrl'));
+
+document.getElementById("3dform").action = issuerUrl;
+document.getElementById(PaReq).value = paRequest;
+document.getElementById(MD).value = md;
+document.getElementById(TermUrl).value = termUrl;
 </script>
 
 </body>
