@@ -13,7 +13,7 @@
   margin: -75px 0 0 -75px;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #ff5c39;
   width: 120px;
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
@@ -30,14 +30,6 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
 
 @-webkit-keyframes animatebottom {
   from { bottom:-100px; opacity:0 } 
@@ -58,11 +50,6 @@
 <body onload="myFunction()" style="margin:0;">
 
 <div id="loader"></div>
-
-<div style="display:none;" id="myDiv" class="animate-bottom">
-  <h2>Tada!</h2>
-  <p>Some text in my newly loaded page..</p>
-</div>
 
 <form method="POST" action="" id="3dform">
     <input type="hidden" name="PaReq" id="PaReq" value="" />
@@ -94,7 +81,7 @@ function myFunction() {
   document.getElementById("MD").value = md;
   document.getElementById("TermUrl").value = termUrl;
 
-  myVar = setTimeout(showPage, 3000);
+  myVar = setTimeout(showPage, 30000);
 }
 
 function showPage() {
