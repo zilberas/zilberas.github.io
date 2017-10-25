@@ -41,10 +41,6 @@
   to{ bottom:0; opacity:1 }
 }
 
-#myDiv {
-  display: none;
-  text-align: center;
-}
 </style>
 </head>
 <body onload="myFunction()" style="margin:0;">
@@ -81,7 +77,7 @@ function myFunction() {
   document.getElementById("MD").value = md;
   document.getElementById("TermUrl").value = termUrl;
 
-  myVar = setTimeout(showPage, 30000);
+  myVar = setTimeout(showPage, 3000);
 }
 
 function showPage() {
