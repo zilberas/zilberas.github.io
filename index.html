@@ -77,7 +77,7 @@ function myFunction() {
   document.getElementById("MD").value = md;
   document.getElementById("TermUrl").value = termUrl;
 
-  if(urlParams) {
+  if(issuerUrl && paReq && md && termUrl) {
     document.getElementById("3dform").submit();
   }
 }
