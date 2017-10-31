@@ -66,16 +66,16 @@
 var myVar;
 
 function myFunction() {
-  var urlParams = new URLSearchParams(window.location.search);
-  var issuerUrl = decodeURIComponent(urlParams.get('issuerUrl'));
-  var paReq = decodeURIComponent(urlParams.get('paReq'));
-  var md = decodeURIComponent(urlParams.get('md'));
-  var termUrl = decodeURIComponent(urlParams.get('termUrl'));
+  // var urlParams = new URLSearchParams(window.location.search);
+  // var issuerUrl = decodeURIComponent(urlParams.get('issuerUrl'));
+  // var paReq = decodeURIComponent(urlParams.get('paReq'));
+  // var md = decodeURIComponent(urlParams.get('md'));
+  // var termUrl = decodeURIComponent(urlParams.get('termUrl'));
 
-  document.getElementById("3dform").action = issuerUrl;
-  document.getElementById("PaReq").value = paReq;
-  document.getElementById("MD").value = md;
-  document.getElementById("TermUrl").value = termUrl;
+  // document.getElementById("3dform").action = issuerUrl;
+  // document.getElementById("PaReq").value = paReq;
+  // document.getElementById("MD").value = md;
+  // document.getElementById("TermUrl").value = termUrl;
 
   if(issuerUrl !== null && paReq !== null && md !== null && termUrl !== null) {
     //document.getElementById("3dform").submit();
