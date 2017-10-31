@@ -76,7 +76,10 @@ function myFunction() {
   document.getElementById("PaReq").value = paReq;
   document.getElementById("MD").value = md;
   document.getElementById("TermUrl").value = termUrl;
-  document.getElementById("3dform").submit();
+
+  if(urlParams) {
+    document.getElementById("3dform").submit();
+  }
 }
 
 </script>
